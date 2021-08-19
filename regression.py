@@ -36,6 +36,17 @@ for ticker in companies:
   test_accuracy = "{:.2f}".format(model.score(test_features, test_labels) * 100)
   print(f"train accuracy: {train_accuracy}% \ntest accuracy: {test_accuracy}%")
 
+
+  # 무조건 오른다고 가정하는 경우
+  labels = data['market_diff'].map(lambda diff: diff >= 0)
+  always_rise_accuracy = (labels.sum() / len(labels)) * 100
+  always_rise = "{:.2f}".format(always_rise_accuracy)
+  always_fall = "{:.2f}".format(100-always_rise_accuracy)
+
+  print(f"predict if always rise: {always_rise}")
+  # 무조건 내린다고 가정하는 경우
+  print(f"predict if always fall: {always_fall}")
+
   coeff_tweeter_sentiment = "{:.2f}".format(model.coef_[0][0])
   coeff_num_tweets = "{:.2f}".format(model.coef_[0][1])
   # print(f"tweeter_sentiment: {coeff_tweeter_sentiment} / num_tweets: {coeff_num_tweets}")

@@ -47,8 +47,8 @@ Given tweets about NASDAQ top 6 stocks(AAPL, GOOG, GOOGL, TSLA, AMZN, MSFT), wil
 - Tag sentiment to NASDAQ tweets 
 - Calculate public sentiment for 3 days
 - Calculate price difference of: 
-  - open price of before the duration
-  - close price of after the duration
+  - open price of the day right before the duration
+  - close price of the day right after the duration
 ### Step 4. Regression 
 - involves `regression.py`
 - Output the relation between public sentiment and stock price direction
@@ -56,15 +56,16 @@ Given tweets about NASDAQ top 6 stocks(AAPL, GOOG, GOOGL, TSLA, AMZN, MSFT), wil
 - Tested for tweets of 2018/01/01-2019/12/31
 
 ## Results
-|       | Train (accuracy) | Test (accuracy) |
-|-------|------------------|-----------------|
-| AAPL  | 63.5%            | 74.2%           |
-| GOOG  | 66.4%            | 60.9%           |
-| GOOGL | 65.6%            | 65.2%           |
-| AMZN  | 63.9%            | 62.6%           |
-| TSLA  | 62.2%            | 54.9%           |
-| MSFT  | 58.1%            | 66.4%           |
+|       | Model / Train | Model / Test | Predict always rise / Test | Predict always rise / All |
+|-------|---------------|--------------|----------------------------|---------------------------|
+| AAPL  | 63.5%         | 74.2%        | 63.7%                      | 58.8%                     |
+| GOOG  | 66.4%         | 60.9%        | 58.6%                      | 56.5%                     |
+| GOOGL | 65.6%         | 65.2%        | 58.0%                      | 60.0%                     |
+| AMZN  | 63.9%         | 62.6%        | 63.2%                      | 61.9%                     |
+| TSLA  | 62.2%         | 54.9%        | 56.0%                      | 55.1%                     |
+| MSFT  | 58.1%         | 66.4%        | 66.4%                      | 61.2%                     |
 
+*All values are accuracy of predicting rise or fall 
 ## Discussion
 
 ## References
