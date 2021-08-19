@@ -1,7 +1,11 @@
 # private data
-.csv
-.json
+*.csv
+*.json
+/data
 
+# model checkpoint`
+/fintweet-sentiment-classifier
+/tmp_trainer
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
