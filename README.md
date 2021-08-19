@@ -2,6 +2,7 @@
 Given tweets about NASDAQ top 6 stocks(AAPL, GOOG, GOOGL, TSLA, AMZN, MSFT), will be there any relationship between tweet sentiments and the stock price?
 
 ## Directory structure
+```
 |- data
   |- company-sentiment
     : sentiment labeled tweet ids on NASDAQ stocks
@@ -30,6 +31,7 @@ Given tweets about NASDAQ top 6 stocks(AAPL, GOOG, GOOGL, TSLA, AMZN, MSFT), wil
   : output the relation between public sentiment and stock price direction
 |- utils.py
   : misc functions
+```
 
 ## Experiement Pipeline
 ### Step 1. Preprocess tweets to get rid of spam
